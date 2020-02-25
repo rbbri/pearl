@@ -1,19 +1,17 @@
 ---
-templateKey: 'about-page'
-path: /about
-title: About our values
+templateKey: about-page
+title: 'Rule number one: don''t be a dick'
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+PEARL is Hackney Wick's favourite local, serving good coffee, brunch, dinner, craft beers, wine and cocktails.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+​
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+We started our journey with nothing more than a DIY attitude. No, we weren't experts in hospitality by any stretch but we knew all we wanted from a local cafe was a warm greeting, excellent coffee and good value food. Taking over the old Hackney Pearl founded in 2011, we found ourselves in the epi-centre of an artistic warehouse community, our aesthetic fit perfectly. This was an environment with rough edges made beautiful by the interactions found everywhere you turn. 
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+​
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+When we opened in 2016 our friendly attitude carried us through the learning process. We listened to what our regulars wanted and became a firm part of the community, providing caffeine for artists, curing warehouse party hangovers with our generous brunches, even sharing a drink in the evening with our neighbours. What's more, we attracted some lovely people who wanted to be part of our team.
+
+​
+
+Off the back of 'don't be a dick', we become something really special. A vibrant venue draped in plants, filled with local art, good music, delicious food, excellent coffee, craft beers and delicious cocktails all served by the friendliest team in East London.
