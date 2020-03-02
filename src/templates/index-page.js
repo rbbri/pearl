@@ -9,7 +9,8 @@ import Index from '../pages/contact/index'
 
 export const IndexPageTemplate = ({
   image,
-  about
+  about, 
+  gallery
 }) => { 
   const PageContent =  Content
   return (
@@ -68,7 +69,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-      
+
       <Index name="contact"></Index>
     </div>
   )
@@ -117,6 +118,15 @@ export const pageQuery = graphql`
           title
           subtitle
           description
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        gallery {
           image {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {

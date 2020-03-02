@@ -1,9 +1,8 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+gallery:
+  image: /img/download.png
 image: /img/download.png
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
 about:
   title: About PEARL
   subtitle: 'Rule number one: don''t be a dick'
