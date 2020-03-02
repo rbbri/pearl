@@ -19,7 +19,7 @@ const Footer = class extends React.Component {
           <div className="container has-background-black has-text-white-ter">
             <div className="columns">
               <div className="column is-2 social" style={{margin: 'auto'}}>
-                <a title="facebook" href="https://facebook.com">
+                <a title="facebook" href="https://www.facebook.com/pearlhackwick/">
                   <img
                     src={facebook}
                     alt="Facebook"
@@ -27,7 +27,7 @@ const Footer = class extends React.Component {
                   />
                 </a>
 
-                <a title="instagram" href="https://instagram.com">
+                <a title="instagram" href="https://www.instagram.com/pearlhackwick/">
                   <img
                     src={instagram}
                     alt="Instagram"
