@@ -35,8 +35,7 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <section className="section">
+        <section className={`section-alt section`}>
           <div className="container">
             <div className="content">
               <h1>Contact</h1>
@@ -109,7 +108,6 @@ export default class Index extends React.Component {
             </div>
           </div>
         </section>
-      </Layout>
     )
   }
 }

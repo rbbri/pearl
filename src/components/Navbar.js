@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import { navigate } from '@reach/router';
+
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -35,7 +37,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -60,12 +62,12 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+              <a className="navbar-item" to="/about" onClick = {() => navigate('/#about')}>
                 About
-              </Link>
-              <Link className="navbar-item" to="/contact">
+              </a>
+              <a className="navbar-item" to="/contact" onClick={() => navigate('/#contact')}>
                 Contact
-              </Link>
+              </a>
             </div>
             <div className="navbar-end has-text-centered">
             </div>
