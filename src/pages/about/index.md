@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
-title: 'Rule number one: don''t be a dick'
+title: 'About PEARL'
+subtitle: 'Rule number one: don''t be a dick'
 ---
 PEARL is Hackney Wick's favourite local, serving good coffee, brunch, dinner, craft beers, wine and cocktails.
 

@@ -4,7 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+
+export const AboutPageTemplate = ({ title, subtitle, image, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -16,7 +17,15 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
+              <h3 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {subtitle}
+              </h3>
+              <div className="column">
+                <PageContent className="content" content={content}/>
+              </div>
+              <div className="column">
+                <img src={image}></img>
+              </div>
             </div>
           </div>
         </div>
@@ -27,6 +36,8 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
@@ -39,6 +50,8 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        subtitle={post.frontmatter.subtitle}
+        image={post.frontmatter.image}
         content={post.html}
       />
     </Layout>
@@ -57,6 +70,14 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
