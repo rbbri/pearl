@@ -6,9 +6,10 @@ about:
   image: /img/Pearl-Hackney-Wick-sign.jpg
   subtitle: 'Rule number one: don''t be a dick'
   title: About PEARL
-galleryImages:
-  - /img/blog-index.jpg
-  - /img/chemex.jpg
-  - /img/products-grid2.jpg
+gallery:
+  galleryImages:
+    - image: /img/blog-index.jpg
+    - image: /img/chemex.jpg
+    - image: /img/products-grid2.jpg
 ---
 

@@ -10,33 +10,12 @@ import Index from '../pages/contact/index'
 export const IndexPageTemplate = ({
   image,
   about, 
-  gallery
+  galleryImages
 }) => { 
   const PageContent =  Content
   return (
     <div>
-      <div
-        className="full-width-image margin-top-0"
-        style={{
-          backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-          backgroundPosition: `top left`,
-          backgroundAttachment: `fixed`,
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            height: '150px',
-            lineHeight: '1',
-            justifyContent: 'space-around',
-            alignItems: 'left',
-            flexDirection: 'column',
-          }}
-        >
-        </div>
-      </div>
+      
       <section name="about" className="section">
         <div className="container">
           <div className="section">
@@ -69,7 +48,28 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-
+      <div
+        className="full-width-image margin-top-0"
+        style={{
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            })`,
+          backgroundPosition: `top left`,
+          backgroundAttachment: `fixed`,
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            height: '150px',
+            lineHeight: '1',
+            justifyContent: 'space-around',
+            alignItems: 'left',
+            flexDirection: 'column',
+          }}
+        >
+        </div>
+      </div>
       <Index name="contact"></Index>
     </div>
   )
@@ -78,6 +78,9 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   about: PropTypes.object,
+  gallery: PropTypes.shape({
+    galleryImages: PropTypes.array
+  })
 }
 
 const IndexPage = ({ data }) => {
@@ -88,6 +91,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         about={frontmatter.about}
+        galleryImages={frontmatter.galleryImages}
       />
     </Layout>
   )
@@ -127,10 +131,12 @@ export const pageQuery = graphql`
           }
         }
         gallery {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
+          galleryImages {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
