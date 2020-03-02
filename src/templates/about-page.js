@@ -9,25 +9,29 @@ export const AboutPageTemplate = ({ title, subtitle, image, content, contentComp
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
+    <section className="section-alt section section--gradient">
       <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
+
+
+
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
               <h3 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {subtitle}
               </h3>
-              <div className="column">
-                <PageContent className="content" content={content}/>
-              </div>
-              <div className="column">
-                <img src={image}></img>
-              </div>
-            </div>
+
+        <div className="columns">
+          <div className="column is-offset-one-half">
+            <PageContent className="content" content={content} />
           </div>
+          <div className="column">
+            <figure class="image is-5by3">
+              <img src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}></img>
+            </figure>
+
+          </div>
+
         </div>
       </div>
     </section>
