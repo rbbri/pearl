@@ -5,11 +5,10 @@ about:
   image: /img/Pearl-Hackney-Wick-sign.jpg
   subtitle: 'Rule number one: don''t be a dick'
   title: About PEARL
-gallery:
-  galleryImages:
-    - image: /img/blog-index.jpg
-    - image: /img/chemex.jpg
-    - image: /img/products-grid2.jpg
+galleryImages:
+  - image: /img/blog-index.jpg
+  - image: /img/chemex.jpg
+  - image: /img/products-grid2.jpg
 ---
 PEARL is Hackney Wick's favourite local, serving good coffee, brunch, dinner, craft beers, wine and cocktails.
 
