@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Content from '../components/Content'
+import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
 import Index from '../pages/contact/index'
 
@@ -9,12 +9,22 @@ import Index from '../pages/contact/index'
 
 export const IndexPageTemplate = ({
   image,
-  about, 
-  galleryImages
+  about,
+  content, 
+  galleryImages,
+  contentComponent
 }) => { 
-  const PageContent =  Content
+  const PageContent =  contentComponent || Content
   return (
     <div>
+
+      <section name="gallery" className="section">
+        <div className="container">
+          <div className="section">
+            
+          </div>
+        </div>
+      </section>
       
       <section name="about" className="section">
         <div className="container">
@@ -32,7 +42,8 @@ export const IndexPageTemplate = ({
                     <div className="tile">
                         <div className="columns">
                           <div className="column is-offset-one-half">
-                            <PageContent className="content" content={about.description} />
+                          <PageContent className="content" content={content} />
+
                           </div>
                           <div className="column">
                             <figure className="image is-5by3">
@@ -78,20 +89,24 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   about: PropTypes.object,
+  contentComponent: PropTypes.func,
+  content: PropTypes.string,
   gallery: PropTypes.shape({
     galleryImages: PropTypes.array
   })
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { markdownRemark: index } = data
 
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        about={frontmatter.about}
-        galleryImages={frontmatter.galleryImages}
+        contentComponent={HTMLContent}
+        image={index.frontmatter.image}
+        about={index.frontmatter.about}
+        galleryImages={index.frontmatter.galleryImages}
+        content={index.html}
       />
     </Layout>
   )
@@ -110,6 +125,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         image {
           childImageSharp {
@@ -121,7 +137,6 @@ export const pageQuery = graphql`
         about {
           title
           subtitle
-          description
           image {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
