@@ -38,12 +38,12 @@ export const IndexPageTemplate = ({
               </div>
 
               <div className="columns">
-                <div className="column is-four-fifths">
+                <div className="column is-three-fifths">
                   <div className="tile">
                     <PageContent className="content" content={content} />
                   </div>
                 </div>
-                <div className="column is-one-fifth">
+                <div className="column is-two-fifth">
                   <figure className="image is-5by3">
                     <img src={!!about.image.childImageSharp ? about.image.childImageSharp.fluid.src : about.image}></img>
                   </figure>
