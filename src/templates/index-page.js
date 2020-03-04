@@ -1,20 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Content, { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
 import Index from '../pages/contact/index'
+import MarkdownContent from '../components/MarkdownContent'
 
 
 
 export const IndexPageTemplate = ({
   image,
   about,
-  content, 
-  galleryImages,
-  contentComponent
+  galleryImages
 }) => { 
-  const PageContent =  contentComponent || Content
   return (
     <div>
 
@@ -40,7 +37,7 @@ export const IndexPageTemplate = ({
               <div className="columns">
                 <div className="column is-three-fifths">
                   <div className="tile">
-                    <PageContent className="content" content={content} />
+                    <MarkdownContent className="content" content={about.content} />
                   </div>
                 </div>
                 <div className="column is-two-fifth">
@@ -88,8 +85,6 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   about: PropTypes.object,
-  contentComponent: PropTypes.func,
-  content: PropTypes.string,
   gallery: PropTypes.shape({
     galleryImages: PropTypes.array
   })
@@ -101,11 +96,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        contentComponent={HTMLContent}
         image={index.frontmatter.image}
         about={index.frontmatter.about}
         galleryImages={index.frontmatter.galleryImages}
-        content={index.html}
       />
     </Layout>
   )
@@ -124,7 +117,6 @@ export default IndexPage
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      html
       frontmatter {
         image {
           childImageSharp {
@@ -136,6 +128,7 @@ export const pageQuery = graphql`
         about {
           title
           subtitle
+          content
           image {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {

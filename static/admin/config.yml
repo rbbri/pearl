@@ -16,16 +16,11 @@ collections:
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "About Page"
-        name: "about"
-        fields:
-          - {label: Body, name: body, widget: markdown}
-          - {label: About, name: about, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: string}, {label: Image, name: image, widget: image}]}
-
-      - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Body, name: body, widget: markdown}
           - {label: "Image", name: "image", widget: "image"}
+          - {label: About, name: about, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: string}, {label: Content, name: content, widget: markdown},  {label: Image, name: image, widget: image}]}
           - {label: Gallery, name: gallery, widget: object, fields: [{label: Gallery, name: galleryImages, widget: list, field: {label: Image, name: image, widget: image}}]}
