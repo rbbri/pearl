@@ -28,36 +28,35 @@ export const IndexPageTemplate = ({
       
       <section name="about" className="section">
         <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div  className="content">
-                    <div className="tile">
-                      <h1 className={`title about`} style={{fontSize: '6em', marginBottom: 0}}>{about.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{about.subtitle}</h3>
-                    </div>
-                    <div className="tile">
-                        <div className="columns">
-                          <div className="column is-offset-one-half">
-                          <PageContent className="content" content={content} />
+          <div className="content">
+            <div  className="content">
+              <div className="tile">
+                <h1 className={`title about`} style={{fontSize: '6em', marginBottom: 0}}>{about.title}</h1>
+              </div>
+              <div className="tile">
+                <h3 className="subtitle">{about.subtitle}</h3>
+              </div>
 
-                          </div>
-                          <div className="column">
-                            <figure className="image is-5by3">
-                              <img src={!!about.image.childImageSharp ? about.image.childImageSharp.fluid.src : about.image}></img>
-                            </figure>
-                          </div>
-                        </div>
-                    </div>
+              <div className="columns">
+                <div className="column is-four-fifths">
+                  <div className="tile">
+                    <PageContent className="content" content={content} />
                   </div>
                 </div>
+                <div className="column is-one-fifth">
+                  <figure className="image is-5by3">
+                    <img src={!!about.image.childImageSharp ? about.image.childImageSharp.fluid.src : about.image}></img>
+                  </figure>
+                </div>
+              </div>
+
+
+              
               </div>
             </div>
           </div>
-        </div>
+
+
       </section>
       <div
         className="full-width-image margin-top-0"
