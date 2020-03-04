@@ -10,7 +10,7 @@ const IndexPagePreview = ({ entry, getAsset, widgetFor }) => {
       <IndexPageTemplate
         gallery={data.gallery || {}}
         image={getAsset(data.image)}
-        content={widgetFor(data.body)}
+        content={widgetFor('body')}
         about={data.about || {}}
       />
     )
