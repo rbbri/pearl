@@ -4,31 +4,35 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Index from '../pages/contact/index'
 import MarkdownContent from '../components/MarkdownContent'
+import Gallery from '../components/Gallery'
 
 
 
 export const IndexPageTemplate = ({
   image,
   about,
-  galleryImages
+  gallery
 }) => { 
   return (
     <div>
+      <div>
+        <Gallery
+            className="image"
+          photos={gallery.galleryImages}
+        ></Gallery>
+      </div>
 
-      <section name="gallery" className="section">
-        <div className="container">
-          <div className="section">
-            
-          </div>
-        </div>
-      </section>
-      
       <section name="about" className="section">
         <div className="container">
           <div className="content">
-            <div  className="content">
+            <div className="content">
               <div className="tile">
-                <h1 className={`title about`} style={{fontSize: '6em', marginBottom: 0}}>{about.title}</h1>
+                <h1
+                  className={`title about`}
+                  style={{ fontSize: "6em", marginBottom: 0 }}
+                >
+                  {about.title}
+                </h1>
               </div>
               <div className="tile">
                 <h3 className="subtitle">{about.subtitle}</h3>
@@ -37,49 +41,54 @@ export const IndexPageTemplate = ({
               <div className="columns">
                 <div className="column is-three-fifths">
                   <div className="tile">
-                    <MarkdownContent className="content" content={about.content} />
+                    <MarkdownContent
+                      className="content"
+                      content={about.content}
+                    />
                   </div>
                 </div>
                 <div className="column is-two-fifth">
                   <figure className="image is-5by3">
-                    <img src={!!about.image.childImageSharp ? about.image.childImageSharp.fluid.src : about.image}></img>
+                    <img
+                      src={
+                        !!about.image.childImageSharp
+                          ? about.image.childImageSharp.fluid.src
+                          : about.image
+                      }
+                    ></img>
                   </figure>
                 </div>
               </div>
-
-
-              
-              </div>
             </div>
           </div>
-
-
+        </div>
       </section>
       <div
         className="full-width-image margin-top-0"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
-          backgroundPosition: `top left`,
-          backgroundAttachment: `fixed`,
+          })`,
+          backgroundPosition: `top center`,
+          backgroundAttachment: `fixed`
         }}
       >
         <div
           style={{
-            display: 'flex',
-            height: '150px',
-            lineHeight: '1',
-            justifyContent: 'space-around',
-            alignItems: 'left',
-            flexDirection: 'column',
+            display: "flex",
+            height: "150px",
+            lineHeight: "1",
+            justifyContent: "space-around",
+            alignItems: "left",
+            flexDirection: "column"
           }}
-        >
-        </div>
+        ></div>
       </div>
+
+      
       <Index name="contact"></Index>
     </div>
-  )
+  );
 }
 
 IndexPageTemplate.propTypes = {
@@ -98,7 +107,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={index.frontmatter.image}
         about={index.frontmatter.about}
-        galleryImages={index.frontmatter.galleryImages}
+        gallery={index.frontmatter.gallery}
       />
     </Layout>
   )

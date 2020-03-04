@@ -27,6 +27,8 @@
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
+    "react-awesome-slider": "^4.1.0",
+    "react-bnb-gallery": "^1.1.9",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "showdown": "^1.9.1",
