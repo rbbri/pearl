@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  repo: 
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
@@ -22,5 +23,5 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Body, name: body, widget: markdown}
           - {label: "Image", name: "image", widget: "image"}
-          - {label: Gallery, name: gallery, widget: object, fields: [{label: Gallery, name: galleryImages, widget: list, field: {label: Image, name: image, widget: image}}]
           - {label: About, name: about, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: string}, {label: Image, name: image, widget: image}]}
+          - {label: Gallery, name: gallery, widget: object, fields: [{label: Gallery, name: galleryImages, widget: list, field: {label: Image, name: image, widget: image}}]}
