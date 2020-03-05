@@ -20,6 +20,6 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Background", name: "image", widget: "image"}
           - {label: About, name: about, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: string}, {label: Content, name: content, widget: markdown},  {label: Image, name: image, widget: image}]}
-          - {label: Gallery, name: gallery, widget: object, fields: [{label: Gallery, name: galleryImages, widget: list, field: {label: Image, name: image, widget: image}}]}
+          - {label: Gallery, name: gallery, widget: object, fields: [{label: Images, name: galleryImages, widget: list, field: {label: Image, name: image, widget: image}}]}

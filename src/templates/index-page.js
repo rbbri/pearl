@@ -16,10 +16,7 @@ export const IndexPageTemplate = ({
   return (
     <div>
       <div>
-        <Gallery
-            className="image"
-          photos={gallery.galleryImages}
-        ></Gallery>
+        <Gallery className="image" photos={gallery.galleryImages}></Gallery>
       </div>
 
       <section name="about" className="section">
@@ -85,8 +82,9 @@ export const IndexPageTemplate = ({
         ></div>
       </div>
 
-      
-      <Index name="contact"></Index>
+      <section name="contact">
+        <Index ></Index>
+      </section>
     </div>
   );
 }
