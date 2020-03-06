@@ -2,11 +2,11 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
 
 media_folder: static/img
 public_folder: /img
@@ -16,10 +16,211 @@ collections:
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Home"
         name: "index"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Background", name: "image", widget: "image"}
-          - {label: About, name: about, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Subtitle, name: subtitle, widget: string}, {label: Content, name: content, widget: markdown},  {label: Image, name: image, widget: image}]}
-          - {label: Gallery, name: gallery, widget: object, fields: [{label: Images, name: galleryImages, widget: list, field: {label: Image, name: image, widget: image}}]}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: "Background", name: "image", widget: "image" }
+          - {
+              label: About,
+              name: about,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Subtitle, name: subtitle, widget: string },
+                  { label: Content, name: content, widget: markdown },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+          - {
+              label: Gallery,
+              name: gallery,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Images,
+                    name: galleryImages,
+                    widget: list,
+                    field: { label: Image, name: image, widget: image },
+                  },
+                ],
+            }
+      - file: "src/pages/brunch-menu.md"
+        label: "Brunch Menu"
+        name: "brunch"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "brunch-menu",
+            }
+          - {
+              label: About,
+              name: about,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Content, name: content, widget: markdown },
+                  {
+                    label: Brunch Times,
+                    name: brunchTimes,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Week, name: week, widget: string },
+                        { label: Weekday, name: weekday, widget: string },
+                      ],
+                  },
+                ],
+            }
+
+          - {
+              label: Menu,
+              name: menu,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Section,
+                    name: section,
+                    widget: List,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        { label: Featured, name: featured, widget: boolean },
+                        {
+                          label: "Items",
+                          name: items,
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: Item,
+                                name: item,
+                                widget: object,
+                                fields:
+                                  [
+                                    {
+                                      label: Title,
+                                      name: title,
+                                      widget: string,
+                                    },
+                                    {
+                                      label: Price,
+                                      name: price,
+                                      widget: string,
+                                    },
+                                    {
+                                      label: "Dietary Info",
+                                      name: info,
+                                      widget: string,
+                                    },
+                                    {
+                                      label: "Description",
+                                      name: description,
+                                      widget: markdown,
+                                    },
+                                  ],
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+      - file: "src/pages/evening-menu.md"
+        label: "Evening Menu"
+        name: "evening"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "evening-menu",
+            }
+          - {
+              label: About,
+              name: about,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Content, name: content, widget: markdown },
+                  { label: Evening Times, name: eveningTimes, widget: string,},
+                ],
+            }
+
+          - {
+              label: Menu,
+              name: menu,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Section,
+                    name: section,
+                    widget: List,
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        { label: Featured, name: featured, widget: boolean },
+                        { label: Full, name: full, widget: boolean },
+                        {
+                          label: "Items",
+                          name: items,
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: Item,
+                                name: item,
+                                widget: object,
+                                fields:
+                                  [
+                                    {
+                                      label: Title,
+                                      name: title,
+                                      widget: string,
+                                    },
+                                    {
+                                      label: Price,
+                                      name: price,
+                                      widget: string,
+                                    },
+                                    {
+                                      label: "Dietary Info",
+                                      name: info,
+                                      widget: string,
+                                    },
+                                    {
+                                      label: "Description",
+                                      name: description,
+                                      widget: markdown,
+                                    },
+                                  ],
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }

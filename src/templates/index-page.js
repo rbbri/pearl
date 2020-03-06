@@ -2,10 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Index from '../pages/contact/index'
 import MarkdownContent from '../components/MarkdownContent'
 import Gallery from '../components/Gallery'
-
+import Contact from '../components/Contact'
 
 
 export const IndexPageTemplate = ({
@@ -83,7 +82,7 @@ export const IndexPageTemplate = ({
       </div>
 
       <section name="contact">
-        <Index ></Index>
+        <Contact></Contact>
       </section>
     </div>
   );

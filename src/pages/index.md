@@ -39,4 +39,4 @@ gallery:
     - image: /img/chemex.jpg
     - image: /img/products-grid2.jpg
 ---
-j
+

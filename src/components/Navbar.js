@@ -64,6 +64,12 @@ const Navbar = class extends React.Component {
               <a className="navbar-item" to="/about" onClick = {() => navigate('/#about')}>
                 About
               </a>
+              <a className="navbar-item" to="/brunch-menu" onClick={() => navigate('/brunch-menu')}>
+                Brunch Menu
+              </a>
+              <a className="navbar-item" to="/evening-menu" onClick={() => navigate('/evening-menu')}>
+                Evening Menu
+              </a>
               <a className="navbar-item" to="/contact" onClick={() => navigate('/#contact')}>
                 Contact
               </a>
