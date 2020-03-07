@@ -3,15 +3,20 @@ import PropTypes from 'prop-types'
 import { EveningMenuTemplate } from '../../templates/evening-menu'
 
 const EveningMenuPreview = ({ entry }) => {
-  const data = entry.getIn(['data']).toJS()
+
+  const data = entry.getIn(["data"]).toJS();
+  const about = entry.data.about
+  const menu = entry.data.menu
 
   if (data) {
     return (
       <EveningMenuTemplate
-      about={data.about || {}}
-      menu={data.menu || {}}
+        about={about || {}}
+        menu={{
+          section: widgetsFor(menu.section)
+        }}
       />
-    )
+    );
   } else {
     return <div>Loading...</div>
   }
