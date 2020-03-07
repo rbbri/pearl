@@ -10,5 +10,5 @@ CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('brunch', BrunchMenuPreview)
-CMS.registerPreviewTemplate('evening', EveningMenuPreview )
+CMS.registerPreviewTemplate('brunch-menu', BrunchMenuPreview)
+CMS.registerPreviewTemplate('evening-menu', EveningMenuPreview )

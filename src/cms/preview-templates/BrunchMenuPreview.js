@@ -3,15 +3,27 @@ import PropTypes from 'prop-types'
 import { BrunchMenuTemplate } from '../../templates/brunch-menu'
 
 const BrunchMenuPreview = ({ entry }) => {
-  const data = entry.getIn(['data']).toJS()
+
+  const menuSections = entry.getIn(['data', 'menu', 'sections'])
+  const sections = menuSections ? menuSections.toJS() : []
 
   if (data) {
     return (
       <BrunchMenuTemplate
-      about={data.about || {}}
-      menu={data.menu || {}}
+        about={{
+          title: entry.getIn(["data", "about", "title"]),
+          content: entry.getIn(["data", "about", "content"]),
+          brunchTimes: {
+            week: entry.getIn(["data", "about", "week"]),
+            weekend: entry.getIn(["data", "about", "weekend"])
+          }
+        }}
+
+        menu={{
+          sections
+        }}
       />
-    )
+    );
   } else {
     return <div>Loading...</div>
   }
