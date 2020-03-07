@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { EveningMenuTemplate } from '../../templates/evening-menu'
 
-const EveningMenuPreview = ({ entry }) => {
+const EveningMenuPreview = ({ entry, widgetsFor }) => {
 
   const data = entry.getIn(["data"]).toJS();
   const about = entry.data.about
@@ -24,8 +24,9 @@ const EveningMenuPreview = ({ entry }) => {
 
 EveningMenuPreview.propTypes = {
   entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  })
-}
+    getIn: PropTypes.func
+  }),
+  widgetsFor: PropTypes.func
+};
 
 export default EveningMenuPreview
