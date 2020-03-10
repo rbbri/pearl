@@ -15,7 +15,7 @@ menu:
             - item:
                 title: Vegan Oyster Mushroom
                 price:
-                info: (ve)
+                info:
                 description: With pickled red cabbage, black beans, pico de gallo and coriander 
             - item:
                 title: Taco el Pastor
@@ -75,7 +75,7 @@ menu:
                 title: Sourdough Bread
                 price: £2.50
                 info: (ve/gf option)
-                description: add one, two or three dips £4.50 / £6.50 / £7.50 
+                description: Add one, two or three dips £4.50 / £6.50 / £7.50 
             - item:
                 title: Spanakopita
                 price: £8
@@ -86,7 +86,7 @@ menu:
                 price: £9
                 info: (ve/n)
                 description: >-
-                  A selection of hummus, romesco and baba ganoush dips with toasted sourdough and seasonal veggies            
+                  A selection of hummus, romesco, and baba ganoush dips with toasted sourdough and seasonal veggies            
             - item:
                 title: It's Nacho Business
                 price: £6
@@ -117,7 +117,7 @@ menu:
                 price: £11.50
                 info:  
                 description: >-
-                 Mexican pulled pork, avocado, pineapple sals, nachos, cheese, and fresh coriander
+                 Mexican pulled pork, avocado, pineapple salsa, nachos, cheese, and fresh coriander
     - section:
         title: Big Plates
         description:
@@ -128,20 +128,20 @@ menu:
                 title: Mother Clucker
                 price: £11
                 info: (gf)
-                description: Half roasted chicken, homemade slaw and a side of lemon & garlic roasted baby potatoes
+                description: Half roasted chicken, homemade slaw, and a side of lemon & garlic roasted baby potatoes
             - item:
                 title: Vegan Thai Curry
                 price: £10
                 info: (ve)(n)  
-                description: Spicy yellow curry with pieces tofu and mango rice
+                description: Spicy yellow curry with pieces of tofu and mango rice
             - item:
                 title: Melanzane Parmigiana
                 price: £10
                 info: (ve/gf options available)  
-                description: Slow-cooked aubergine in rich tomato sauce, parmesan gratin and sourdough bread
+                description: Slow-cooked aubergine in rich tomato sauce, parmesan gratin, and sourdough bread
             - item:
                 title: Fried Polenta
                 price: £9.50
                 info: (ve)(n)  
-                description: With grilled vegetables romesco sauce and toasted hazelnuts
+                description: With grilled vegetables, romesco sauce, and toasted hazelnuts
 ---

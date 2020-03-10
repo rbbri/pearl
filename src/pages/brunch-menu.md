@@ -35,7 +35,7 @@ menu:
                  Fried, poached, or scrambled
             - item:
                 title: Herby Mushrooms
-                price: £16
+                price: £6
                 info: (ve)  
                 description:
             - item:
@@ -104,7 +104,7 @@ menu:
                 title: Vegan Breakfast Crumble
                 price: £5
                 info: (ve)(n)
-                description: Cinnamon apple and mixed berry crumble.Contains pecan nuts
+                description: Cinnamon apple and mixed berry crumble. Contains pecan nuts
             - item:
                 title: Soup of the Day
                 price: £6

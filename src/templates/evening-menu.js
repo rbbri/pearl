@@ -47,6 +47,18 @@ export const EveningMenuTemplate = ({
                     />
                   </div>
 
+                  <div className="tile">
+                    <div>
+                      <div
+                        className="content"
+                        style={{ fontWeight: 600, paddingTop: "10px" }}
+                      >
+                        <div>Dinner is available:</div>
+                        <div>{about.eveningTimes}</div>
+                      </div>
+                    </div>
+                  </div>
+
                   <section className={`section-alt section`}>
                     {full.map(section => (
                       <div key={section.section.title}>
