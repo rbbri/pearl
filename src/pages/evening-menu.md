@@ -7,6 +7,27 @@ about:
     eveningTimes: 5pm–10pm Monday–Sunday
 menu:
     - section:
+        title: Tacos
+        description: £4 each or 3 for £10
+        featured: false
+        full: true
+        items:
+            - item:
+                title: Vegan Oyster Mushroom
+                price:
+                info: (ve)
+                description: With pickled red cabbage, black beans, pico de gallo and coriander 
+            - item:
+                title: Taco el Pastor
+                price:
+                info:
+                description: Slow roast pork, pineapple, white onion, salsa verde and coriander            
+            - item:
+                title: Fish Taco
+                price:
+                info:
+                description: Salmon, avocado, jalpeno, chipotle mayo and lime
+    - section:
         title: Bar Snacks
         description: 
         featured: false
@@ -14,57 +35,113 @@ menu:
         items:
             - item:
                 title: Olives
-                price: £10
+                price: £3.50
                 info: (ve/gf)
-                description: >-
-                 Eggs your way, Cumberland sausage, bacon, black pudding, portobello mushroom, spicy beans, grilled tomato, potato rosti and sourdough toast
+                description:
             - item:
                 title: Chorizo Croquettes
-                price: £10
+                price: £6
                 info: 
-                description: >-
-                 With aioli              
+                description: With aioli              
             - item:
                 title: Soup of the Day
-                price: £10
+                price: £6
                 info: 
                 description: >-
                  Served with a side of sourdough          
             - item:
                 title: Halloumi Fries
-                price: £10
+                price: £6
                 info: (v/gf)
                 description: >-
                  Served with chimichurri mayonnaise dip           
             - item:
                 title: Skinny Fries
-                price: £10
+                price: £3
                 info: (ve/gf)
-                description: >-
-                 Eggs your way, smashed avocado, wilted spinach, portobello mushrooms, potato rosti, grilled tomato, roast aubergine and sourdough toast              
+                description:            
             - item:
                 title: Sweet Potato Fries
-                price: £10
+                price: £4
                 info: (ve/gf)
+                description: Add homemade chimichurri mayo (ve) 50p                  
+    - section:
+        title: Sharers
+        description: 
+        featured: false
+        full: false
+        items:
+            - item:
+                title: Sourdough Bread
+                price: £2.50
+                info: (ve/gf option)
+                description: add one, two or three dips £4.50 / £6.50 / £7.50 
+            - item:
+                title: Spanakopita
+                price: £8
+                info: (v)
+                description: Four Greek-style pastries filled with spinach and feta cheese              
+            - item:
+                title: Vegan Thali
+                price: £9
+                info: (ve/n)
                 description: >-
-                 Eggs your way, smashed avocado, wilted spinach, portobello mushrooms, potato rosti, grilled tomato, roast aubergine and sourdough toast              
+                  A selection of hummus, romesco and baba ganoush dips with toasted sourdough and seasonal veggies            
+            - item:
+                title: It's Nacho Business
+                price: £6
+                info: (v/ve option available) (gf)
+                description: >-
+                 Cheese, jalapeños, guacamole Pico de Gallo, spicy beans and coriander                
     - section:
         title: Banging Burgers
         description: >-
          All served with skinny fries or sweet potato chips in a brioche bun with tomato and lettuce
         featured: true
-        full: true
+        full: false
         items:
             - item:
                 title: Our Famous Cheeseburger
                 price: £10.50
                 info: (gf option available)
                 description: >-
-                 with cheddar or blue cheese and caramelised onions
+                 With cheddar or blue cheese and caramelised onions
             - item:
                 title: Mushroom Bhaji Burger
                 price: £10.50
                 info: (v)(ve/gf options available)  
                 description: >-
-                 blajs
+                 With coriander and lime slaw
+            - item:
+                title: The Mexican
+                price: £11.50
+                info:  
+                description: >-
+                 Mexican pulled pork, avocado, pineapple sals, nachos, cheese, and fresh coriander
+    - section:
+        title: Big Plates
+        description:
+        featured: true
+        full: false
+        items:
+            - item:
+                title: Mother Clucker
+                price: £11
+                info: (gf)
+                description: Half roasted chicken, homemade slaw and a side of lemon & garlic roasted baby potatoes
+            - item:
+                title: Vegan Thai Curry
+                price: £10
+                info: (ve)(n)  
+                description: Spicy yellow curry with pieces tofu and mango rice
+            - item:
+                title: Melanzane Parmigiana
+                price: £10
+                info: (ve/gf options available)  
+                description: Slow-cooked aubergine in rich tomato sauce, parmesan gratin and sourdough bread
+            - item:
+                title: Fried Polenta
+                price: £9.50
+                info: (ve)(n)  
+                description: With grilled vegetables romesco sauce and toasted hazelnuts
 ---

@@ -5,17 +5,12 @@ import { EveningMenuTemplate } from '../../templates/evening-menu'
 const EveningMenuPreview = ({ entry, widgetsFor }) => {
 
   const data = entry.getIn(["data"]).toJS();
-  const about = entry.data.about
-  const menu = entry.data.menu
+  const about = data.about
+  const menu = data.menu
 
   if (data) {
     return (
-      <EveningMenuTemplate
-        about={about || {}}
-        menu={{
-          section: widgetsFor(menu.section)
-        }}
-      />
+      <EveningMenuTemplate about={about || {}} menu={ menu || widgetsFor(menu.section)} />
     );
   } else {
     return <div>Loading...</div>
@@ -25,8 +20,7 @@ const EveningMenuPreview = ({ entry, widgetsFor }) => {
 EveningMenuPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
-  }),
-  widgetsFor: PropTypes.func
+  })
 };
 
 export default EveningMenuPreview

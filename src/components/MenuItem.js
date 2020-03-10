@@ -9,9 +9,6 @@ export const MenuItem = ({ item, className }) => (
         <div className="subtitle">{item.title}</div>
       </div>
       <div className={className}>
-        <div className="subtitle" style={{ fontSize: "0.8rem" }}></div>
-      </div>
-      <div className={className}>
         <div className="subtitle">{item.price}</div>
       </div>
     </div>

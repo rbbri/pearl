@@ -18,7 +18,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 
   return (
-      <AutoplaySlider play={true} cancelOnInteraction={false} interval={6000} bullets={false} organicArrows={false} media ={media}></AutoplaySlider>
+      <AutoplaySlider play={true} cancelOnInteraction={false} showTimer={false} interval={6000} bullets={false} organicArrows={false} media={media}></AutoplaySlider>
   )
   
 

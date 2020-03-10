@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import MarkdownContent from '../components/MarkdownContent'
 import MenuColumn from "../components/MenuColumn"
+import MenuSection from '../components/MenuSection'
+import MenuSectionFull from '../components/MenuSectionFull'
 
 
 export const EveningMenuTemplate = ({
@@ -18,58 +20,60 @@ export const EveningMenuTemplate = ({
       return result;
     }, []);
 
-  const sections = splitEvery(menu, Math.floor(menu.length/2))
-  console.log(sections);
+  const full = menu.filter(section => section.section.full)
+  console.log(full);
+  const columns = menu.filter(section => !section.section.full)
+  
+
+  const sections = splitEvery(columns, Math.floor(columns.length / 2));
+
   
 
     return (
-    <div>
-      <section className={`section-alt section`}>
-        <div className="container">
-          <div className="content">
-            <div className="columns">
-              <div className="column">
-                <div className="tile">
-                  <h1 className={`subtitle is-2`}>{about.title}</h1>
-                </div>
-
-                <div className="tile">
-                  <MarkdownContent
-                    className="content"
-                    content={about.content}
-                  />
-                </div>
-
-                <div className="tile">
-                  <div>
-                    <div
-                      className="content"
-                      style={{ fontWeight: 600, paddingTop: "10px" }}
-                    >
-                      {/* <div>Brunch is available:</div>
-                      <div>{about.brunchTimes.week}</div>
-                      <div>{about.brunchTimes.weekend}</div> */}
-                    </div>
+      <div>
+        <section className={`section-alt section`}>
+          <div className="container">
+            <div className="content">
+              <div className="columns">
+                <div className="column">
+                  <div className="tile">
+                    <h1 className={`subtitle is-2`}>{about.title}</h1>
                   </div>
-                </div>
 
-                <section className={`section-alt section columns`}>
-                  <MenuColumn
-                    sections={sections[0]}
-                    className="tile"
-                  ></MenuColumn>
-                  <MenuColumn
-                    sections={sections[1]}
-                    className="tile"
-                  ></MenuColumn>
-                </section>
+                  <div className="tile">
+                    <MarkdownContent
+                      className="content"
+                      content={about.content}
+                    />
+                  </div>
+
+                  <section className={`section-alt section`}>
+                    {full.map(section => (
+                      <div key={section.section.title}>
+                        <MenuSectionFull
+                          section={section.section}
+                          className="tile"
+                        ></MenuSectionFull>
+                      </div>
+                    ))}
+                    <div className="columns">
+                      <MenuColumn
+                        sections={sections[0]}
+                        className="tile"
+                      ></MenuColumn>
+                      <MenuColumn
+                        sections={sections[1]}
+                        className="tile"
+                      ></MenuColumn>
+                    </div>
+                  </section>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-    )
+        </section>
+      </div>
+    );
 }
 
 EveningMenuTemplate.propTypes = {
